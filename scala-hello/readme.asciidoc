@@ -1,0 +1,19 @@
+= scala-lang
+
+https://scala-lang.org/download/
+
+== 开发环境
+- JDK8
+- IntelliJ IDEA CE 2018.3
+- Scala plugin
+
+
+
+- maven : https://docs.scala-lang.org/tutorials/scala-with-maven.html
+
+== 备注
+使用eclipse，可以编译，代码提示报异常
+
+* Eclipse（2019-03） IDE for Enterprise Java Developers
+* Scala-IED 4.7 通过 Marketplace安装
+* m2eclipse-scala 通过 update-site安装
