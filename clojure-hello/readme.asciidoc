@@ -1,0 +1,26 @@
+= Clojure Hello
+
+https://www.ibm.com/developerworks/cn/opensource/os-eclipse-clojure/
+
+https://clojure.org/guides/
+
+https://github.com/talios/clojure-maven-plugin
+
+
+== 开发环境
+
+- JDK8
+- Maven 3.6
+- IntelliJ IDEA CE 2018.3
+- Clojure plugin
+
+== 运行
+
+mvn compile
+
+mvn clojure:run -Dclojure.mainClass=Hello
+
+mvn test
+
+== 备注
+
