@@ -13,6 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
+object FizzBuzz extends App {
+  var n = args(0).toInt;
+  for (a <- 1 to n) {
+    if (a % 3 == 0 && a % 5 == 0) {
+      println("FizzBuzz")
+    } else if (a % 3 == 0) {
+      println("Fizz")
+    } else if (a % 5 == 0) {
+      println("Buzz")
+    } else {
+      println(a)
+    }
+  }
 }

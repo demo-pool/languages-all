@@ -13,6 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
+var n = parseInt(process.argv[2])
+for (var i = 1; i <= n; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz")
+  } else if (i % 3 == 0) {
+    console.log("Fizz")
+  } else if (i % 5 == 0) {
+    console.log("Buzz")
+  } else {
+    console.log(i)
+  }
 }

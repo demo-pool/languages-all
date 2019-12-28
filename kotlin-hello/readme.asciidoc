@@ -1,0 +1,15 @@
+= Kotlin Hello
+
+
+== 开发环境
+- JDK8
+- IntelliJ IDEA CE 2018.3
+
+== 运行
+
+[source, shell]
+----
+mvn compile
+mvn exec:java  -Dexec.mainClass="cn.devit.demo.HelloKt" -Dexec.args=""
+mvn exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzzKt" -Dexec.args="100"
+----

@@ -13,6 +13,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
-}
+console.log("Hello World.")

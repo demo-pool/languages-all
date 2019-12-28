@@ -1,0 +1,15 @@
+= Python Hello
+
+
+== 开发环境
+
+- Python3.7
+- IntelliJ IDEA CE 2018.3
+
+== 运行
+
+[source, shell]
+----
+python3 src/main/python/Hello.py 100
+python3 src/main/python/FizzBuzz.py 100
+----

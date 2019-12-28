@@ -1,15 +1,23 @@
-= scala-lang
+= Scala Hello
 
 https://scala-lang.org/download/
 
 == 开发环境
+
 - JDK8
 - IntelliJ IDEA CE 2018.3
 - Scala plugin
-
-
-
 - maven : https://docs.scala-lang.org/tutorials/scala-with-maven.html
+
+== 运行
+
+[source, shell]
+----
+mvn compile
+mvn exec:java -Dexec.mainClass="Hello" -Dexec.args=""
+mvn exec:java -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
+----
+
 
 == 备注
 使用eclipse，可以编译，代码提示报异常

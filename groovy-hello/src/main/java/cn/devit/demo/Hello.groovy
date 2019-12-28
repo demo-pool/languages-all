@@ -13,6 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
+package cn.devit.demo;
+
+public class Hello {
+
+  static void main(String[] args){
+    println "Hello World."
+  }
 }

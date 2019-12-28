@@ -13,6 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
+package cn.devit.demo
+
+/**
+ * @author lxb
+ */
+class FizzBuzz {
+
+  static void main(String[] args) {
+    int n = args[0] as int;
+    for (int i = 1; i <= n; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        println "FizzBuzz"
+      } else if (i % 3 == 0) {
+        println "Fizz"
+      } else if (i % 5 == 0) {
+        println "Buzz"
+      } else {
+        println i
+      }
+    }
+
+  }
 }

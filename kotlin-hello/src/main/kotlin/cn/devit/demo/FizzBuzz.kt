@@ -13,6 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-object Hello extends App {
-  println(s"Hello World.")
+ package cn.devit.demo
+
+/**
+ * @author lxb
+ */
+fun main(args: Array<String>) {
+    var n = args[0].toInt();
+    for (i in 1..n) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            println("FizzBuzz")
+        } else if (i % 3 == 0) {
+            println("Fizz")
+        } else if (i % 5 == 0) {
+            println("Buzz")
+        } else {
+            println(i)
+        }
+
+    }
 }

@@ -1,0 +1,14 @@
+= Javascript Hello
+
+
+== 开发环境
+- node 10
+- visual studio code
+
+== 运行
+
+[source, shell]
+----
+node src/main/javascript/hello.js
+node src/main/javascript/fizz_buzz.js 100
+----

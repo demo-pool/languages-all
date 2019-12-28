@@ -20,7 +20,11 @@ mvn compile
 
 mvn clojure:run -Dclojure.mainClass=Hello
 
-mvn test
+mvn exec:java  -Dexec.mainClass=Hello 
 
-== 备注
+mvn clojure:run -Dclojure.mainClass=FizzBuzz -Dclojure.args=100
+
+mvn exec:java  -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
+
+mvn test
 
