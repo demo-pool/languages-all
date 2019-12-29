@@ -1,0 +1,20 @@
+= Dotnet Vb Hello
+
+https://docs.microsoft.com/zh-cn/dotnet/visual-basic/language-reference/
+
+== 开发环境
+
+- dotnet core 3.0
+- Visual studio code
+
+== 运行
+
+[source, shell]
+----
+cd hello
+dotnet run 
+
+
+cd fizzbuzz
+dotnet run 100
+----

@@ -1,0 +1,22 @@
+= Csharp Hello
+
+https://docs.microsoft.com/zh-cn/dotnet/core/tutorials/with-visual-studio-code
+
+https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/main-and-command-args/
+
+== 开发环境
+
+- dotnet core 3.0
+- Visual studio code
+
+== 运行
+
+[source, shell]
+----
+cd hello
+dotnet run 
+
+
+cd fizzbuzz
+dotnet run 100
+----
