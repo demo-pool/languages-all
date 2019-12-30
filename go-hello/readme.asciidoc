@@ -1,0 +1,15 @@
+= Go Hello
+
+
+== 开发环境
+
+- go 1.13
+- Visual studio code
+
+== 运行
+
+[source, shell]
+----
+go run hello.go
+go run FizzBuzz.go 100
+----
