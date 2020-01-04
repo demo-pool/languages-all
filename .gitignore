@@ -5,3 +5,5 @@ target
 bin
 obj
 out
+node_modules
+build
