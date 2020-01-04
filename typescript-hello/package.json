@@ -1,0 +1,20 @@
+{
+  "name": "javascript-hello",
+  "version": "0.1.0",
+  "main": "hello-world-server.js",
+  "scripts": {
+    "hello": "node src/main/javascript/hello.js",
+    "fizzbuzz": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "javascript",
+    "helloworld"
+  ],
+  "author": "lxb",
+  "license": "Apache",
+  "readmeFilename": "readme.asciidoc",
+  "dependencies": {
+    "@types/node": "^13.1.2"
+  }
+}
