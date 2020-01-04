@@ -1,0 +1,16 @@
+= C Hello
+
+
+== 开发环境
+
+- Eclipse Cpp
+- gcc Make
+
+== 运行
+
+[source, shell]
+----
+make
+./target/hello
+./target/fizz-buzz 100
+----
