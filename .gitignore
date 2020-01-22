@@ -2,6 +2,7 @@
 !.gitignore
 target
 *.iml
+*.lock
 bin
 obj
 out

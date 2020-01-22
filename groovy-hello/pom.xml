@@ -34,26 +34,6 @@
           </dependency>
         </dependencies>
       </plugin>
-      <!-- <plugin>
-        能编译src/main/groovy里面的groovy，不能编译src/main/java里面的groovy
-        <groupId>org.codehaus.gmavenplus</groupId>
-        <artifactId>gmavenplus-plugin</artifactId>
-        <version>1.6.2</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>addSources</goal>
-              <goal>addTestSources</goal>
-              <goal>generateStubs</goal>
-              <goal>compile</goal>
-              <goal>generateTestStubs</goal>
-              <goal>compileTests</goal>
-              <goal>removeStubs</goal>
-              <goal>removeTestStubs</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin> -->
     </plugins>
   </build>
   <dependencies>
