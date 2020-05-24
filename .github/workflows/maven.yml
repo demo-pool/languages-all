@@ -26,6 +26,12 @@ jobs:
          mvn -B compile 
          mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
          mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
+    - name: groovy-hello
+      run: |
+         cd groovy-hello
+         mvn -B compile 
+         mvn exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+         mvn exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"     
     - name: kotlin-hello
       run: |
         cd kotlin-hello
@@ -118,6 +124,6 @@ jobs:
     - name: typescript-hello
       run: |
         cd typescript-hello
-        node src/main/javascript/hello.ts
-        node src/main/javascript/fizz_buzz.ts 100    
+        node src/main/typescript/hello.ts
+        node src/main/typescript/fizz_buzz.ts 100    
     
