@@ -4,7 +4,7 @@
   "main": "hello-world-server.js",
   "scripts": {
     "hello": "node src/main/javascript/hello.js",
-    "fizzbuzz": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+    "fizzbuzz": "node src/main/javascript/fizz_buzz.js"
   },
   "repository": "",
   "keywords": [

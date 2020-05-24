@@ -10,6 +10,6 @@
 
 [source, shell]
 ----
-node src/main/javascript/hello.js
-node src/main/javascript/fizz_buzz.js 100
+node src/main/javascript/hello.ts
+node src/main/javascript/fizz_buzz.ts 100
 ----

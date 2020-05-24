@@ -1,10 +1,11 @@
 {
-  "name": "javascript-hello",
+  "name": "typescript-hello",
   "version": "0.1.0",
-  "main": "hello-world-server.js",
+  "main": "hello.js",
   "scripts": {
-    "hello": "node src/main/javascript/hello.js",
-    "fizzbuzz": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+    "compile": "node_modules/typescript/bin/tsc --outDir target src/main/typescript/*.ts",
+    "hello": "node target/hello.js",
+    "fizzbuzz": "node target/fizz_buzz.js 100"
   },
   "repository": "",
   "keywords": [
@@ -15,6 +16,7 @@
   "license": "Apache",
   "readmeFilename": "readme.asciidoc",
   "dependencies": {
-    "@types/node": "^13.1.2"
+    "@types/node": "^12.0.0",
+    "typescript": "^3.0.0"
   }
 }

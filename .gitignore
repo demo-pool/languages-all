@@ -1,5 +1,6 @@
 .*
 !.gitignore
+!.github
 target
 *.iml
 *.lock
@@ -8,3 +9,4 @@ obj
 out
 node_modules
 build
+package-lock.json

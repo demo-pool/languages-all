@@ -1,0 +1,148 @@
+# 
+name: Build all languages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: java-hello
+      run: |
+         cd java-hello
+         mvn -B compile 
+         mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+         mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
+    - name: groovy-hello
+      run: |
+         cd groovy-hello
+         mvn -B compile 
+         mvn exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+         mvn exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"     
+    - name: kotlin-hello
+      run: |
+        cd kotlin-hello
+        mvn compile
+        mvn exec:java  -Dexec.mainClass="cn.devit.demo.HelloKt" -Dexec.args=""
+        mvn exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzzKt" -Dexec.args="100"    
+    - name: scala-hello
+      run: |
+        cd scala-hello
+        mvn -B compile
+        mvn exec:java -Dexec.mainClass="Hello" -Dexec.args=""
+        mvn exec:java -Dexec.mainClass="FizzBuzz" -Dexec.args="100"  
+    - name: clojure-hello
+      run: |
+        cd clojure-hello
+        mvn -B compile
+        mvn exec:java  -Dexec.mainClass=Hello 
+        mvn exec:java  -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
+        
+        
+        
+    - name: c-hello
+      run: |
+        cd c-hello
+        make
+        ./target/hello
+        ./target/fizz-buzz 100
+        
+    - name: shell-hello
+      run: |
+        cd shell-hello
+        sh src/main/shell/hello.sh
+        #sh src/main/shell/fizz-buzz.sh 100
+
+        
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.13
+      id: go
+
+    - name: go-hello
+      run: |
+        cd go-hello
+        go run hello.go
+        go run FizzBuzz.go 100  
+        
+        
+        
+        
+        
+        
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: csharp-hello
+      run: |
+        cd csharp-hello
+        cd hello
+        dotnet run
+        cd ..
+        cd fizzbuzz
+        dotnet run 100
+    - name: fsharp-hello
+      run: |
+       cd fsharp-hello
+       cd hello
+       dotnet run 
+       cd ..
+       cd fizzbuzz
+       dotnet run 100     
+    - name: netvb-hello
+      run: |
+        cd netvb-hello
+        cd hello
+        dotnet run 
+        cd ..
+        cd fizzbuzz
+        dotnet run 100  
+        
+        
+        
+        
+        
+        
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+      
+    - name: python-hello
+      run: |
+        cd python-hello
+        python3 src/main/python/Hello.py 100
+        python3 src/main/python/FizzBuzz.py 100
+    
+
+    - name: node12
+      uses: actions/setup-node@v1
+      with: 
+        node-version: 12
+
+    - name: javascript-hello
+      run: |
+        cd javascript-hello
+        node src/main/javascript/hello.js
+        node src/main/javascript/fizz_buzz.js 100
+        
+    - name: typescript-hello
+      run: |
+        cd typescript-hello
+        npm install
+        npm run compile
+        npm run hello
+        npm run fizzbuzz
