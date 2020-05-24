@@ -124,6 +124,8 @@ jobs:
     - name: typescript-hello
       run: |
         cd typescript-hello
-        node src/main/typescript/hello.ts
-        node src/main/typescript/fizz_buzz.ts 100    
+        npm install
+        npm run compile
+        npm run hello
+        npm run fizzbuzz    
     
