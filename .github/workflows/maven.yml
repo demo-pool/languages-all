@@ -40,6 +40,56 @@ jobs:
         mvn exec:java -Dexec.mainClass="FizzBuzz" -Dexec.args="100"  
     - name: clojure-hello
       run: |
+        cd clojure-hello
         mvn -B compile
         mvn exec:java  -Dexec.mainClass=Hello 
         mvn exec:java  -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
+    - name: c-hello
+      run: |
+        cd c-hello
+        make
+        ./target/hello
+        ./target/fizz-buzz 100
+        
+    - name: Set up Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.13
+      id: go
+
+    - name: go-hello
+      run: |
+        cd go-hello
+        go run hello.go
+        go run FizzBuzz.go 100  
+        
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install dependencies
+      run: dotnet restore
+    - name: csharp-hello
+      run: |
+        cd csharp-hello
+        cd hello
+        dotnet run
+        cd ..
+        cd fizzbuzz
+        dotnet run 100
+    - name: fsharp-hello
+      run: |
+       cd fsharp-hello
+       cd hello
+       dotnet run 
+       cd ..
+       cd fizzbuzz
+       dotnet run 100     
+    - name: netvb-hello
+      run: |
+        cd netvb-hello
+        cd hello
+        dotnet run 
+        cd ..
+        cd fizzbuzz
+        dotnet run 100  
