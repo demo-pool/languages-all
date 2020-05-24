@@ -101,4 +101,23 @@ jobs:
       run: |
         cd python-hello
         python3 src/main/python/Hello.py 100
-        python3 src/main/python/FizzBuzz.py 100  
+        python3 src/main/python/FizzBuzz.py 100
+    
+
+    - name: node12
+      uses: actions/setup-node@v1
+      with: 
+        node-version: 12
+
+    - name: javascript-hello
+      run: |
+        cd javascript-hello
+        node src/main/javascript/hello.js
+        node src/main/javascript/fizz_buzz.js 100
+        
+    - name: typescript-hello
+      run: |
+        cd typescript-hello
+        node src/main/javascript/hello.ts
+        node src/main/javascript/fizz_buzz.ts 100    
+    
