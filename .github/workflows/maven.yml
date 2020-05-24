@@ -21,5 +21,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -f java-hello exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+      run: mvn -f java-hello -B compile exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
       
