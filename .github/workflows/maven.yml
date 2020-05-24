@@ -26,12 +26,6 @@ jobs:
          mvn -B compile 
          mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
          mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
-    - name: groovy-hello
-      run: |
-        cd groovy-hello
-        mvn -B compile
-        mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
-        mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
     - name: kotlin-hello
       run: |
         cd kotlin-hello
