@@ -67,8 +67,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Install dependencies
-      run: dotnet restore
     - name: csharp-hello
       run: |
         cd csharp-hello
@@ -93,3 +91,14 @@ jobs:
         cd ..
         cd fizzbuzz
         dotnet run 100  
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+      
+    - name: python-hello
+      run: |
+        cd python-hello
+        python3 src/main/python/Hello.py 100
+        python3 src/main/python/FizzBuzz.py 100  
