@@ -1,6 +1,6 @@
 = 不同编程语言的体验
 
-
+image::https://github.com/demo-pool/languages-all/workflows/Build%20all%20languages/badge.svg[build] 
 
 == 必须的基础知识
 
