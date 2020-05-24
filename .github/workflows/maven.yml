@@ -20,6 +20,31 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
-      run: mvn -f java-hello -B compile exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
-      
+    - name: java-hello
+      run: |
+         cd java-hello
+         mvn -B compile 
+         mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+         mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
+    - name: groovy-hello
+      run: |
+        cd groovy-hello
+        mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.Hello" -Dexec.args=""
+        mvn -B exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzz" -Dexec.args="100"
+    - name: kotlin-hello
+      run: |
+        cd kotlin-hello
+        mvn compile
+        mvn exec:java  -Dexec.mainClass="cn.devit.demo.HelloKt" -Dexec.args=""
+        mvn exec:java  -Dexec.mainClass="cn.devit.demo.FizzBuzzKt" -Dexec.args="100"    
+    - name: scala-hello
+      run: |
+        cd scala-hello
+        mvn -B compile
+        mvn exec:java -Dexec.mainClass="Hello" -Dexec.args=""
+        mvn exec:java -Dexec.mainClass="FizzBuzz" -Dexec.args="100"  
+    - name: clojure-hello
+      run: |
+        mvn -B compile
+        mvn exec:java  -Dexec.mainClass=Hello 
+        mvn exec:java  -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
