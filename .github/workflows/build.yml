@@ -61,8 +61,8 @@ jobs:
     - name: shell-hello
       run: |
         cd shell-hello
-        sh src/main/shell/hello.sh
-        #sh src/main/shell/fizz-buzz.sh 100
+        bash src/main/shell/hello.sh
+        bash src/main/shell/fizz-buzz.sh 100
 
         
     - name: Set up Go 1.x
