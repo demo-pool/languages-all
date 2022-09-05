@@ -148,7 +148,7 @@ jobs:
         npm run fizzbuzz
     
     - name: Setup rust & cargo
-      uses: actions-rs/install@v0.1.2  
+      uses: actions-rs/toolchain@v1.0.6
     
     - name: rust build (cargo)
       run: |
