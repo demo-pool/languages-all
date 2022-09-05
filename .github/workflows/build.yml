@@ -155,5 +155,6 @@ jobs:
     - name: rust build (cargo)
       run: |
         cd rust-hello
+        cargo build
         cargo run --bin hello
         cargo run --bin fizz-buzz 100
