@@ -146,3 +146,11 @@ jobs:
         npm run compile
         npm run hello
         npm run fizzbuzz
+    
+    - name: Setup rust & cargo
+      uses: actions-rs/cargo@v1.0.1
+    - name: rust build (cargo)
+      run: |
+        cd rust-hello
+        cargo run --bin hello
+        cargo run --bin fizz-buzz 100
