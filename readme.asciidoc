@@ -2,32 +2,51 @@
 
 image::https://github.com/demo-pool/languages-all/workflows/Build%20all%20languages/badge.svg[build] 
 
+采用比较学习法（comparative study method），对比同一组案例在不同编程语言的实现，能够更客观的学习并理解编程语言的应用场景，也为编程语言的选择提供一点指导。
+
+[WARNING]
+
+仅供教学或学习编程语言用。不能用于生产。
+
 == 必须的基础知识
 
-* IT英语词汇
+* 编程中常见英语词汇
 * 搭建开发环境
   - 电脑
   - 编辑工具
   - 编译环境
   - 运行环境
-* unit test 知识
+* Unit test 知识
 
-== 案例
+== 案例集
 
-场景一：
-  执行程序能输出“Hello World.”
-  
+[NOTE] 
+每个场景是均独立演示编程语言的某一类特征。为方便比较，每个场景均有一个相似的、简单的解法。
+
+=== Hello World
+
+[source,cucumber]
+----
+场景一： Hello World
+  * 当执行运行程序
+  * 则在控制台输出“Hello World.”
+  * 程序退出
+----
+
+=== Fizz Buzz
+
+[source,cucumber]
+----
 场景二：输出从 1 到 n 数字的字符串表示。
+  * 如果 n 是3的倍数，输出“Fizz”；
+  * 如果 n 是5的倍数，输出“Buzz”；
+  * 如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
+----
 
-1. 如果 n 是3的倍数，输出“Fizz”；
-2. 如果 n 是5的倍数，输出“Buzz”；
-3. 如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
-
-
-标准footnote:[标准，为了比较和记忆，采用简单的，能在众多语言中都能实现的逻辑设计];解法：
+标准footnote:[标准，为了比较和记忆，采用简单的，能在众多语言中都能实现的逻辑设计]解法：
 
 1. 定义变量n
-2. 接收从控制台传入的第一个参数，整数
+2. 接收从控制台传入的第一个参数
 3. 将字符串参数解析成整型
 4. 设置循环，变量i，[1,n]
 5. 判断3、5整除、输出FizzBuzz
@@ -38,6 +57,8 @@ image::https://github.com/demo-pool/languages-all/workflows/Build%20all%20langua
 
 == 代码风格
 
-文件编码：UTF8
+所有源程序使用相似的代码风格，方便比较阅读。
 
-缩进：2空格
+1. 文件编码：UTF8
+2. 缩进：2空格
+3. 每种编程语言一个子目录，起名为”编程语言-hello“形式
