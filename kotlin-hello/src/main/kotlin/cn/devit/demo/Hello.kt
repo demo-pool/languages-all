@@ -1,5 +1,5 @@
 /*
- * Copyright 2017-2019 lxb.
+ * Copyright 2017-2023 lxb.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,6 @@ class Hello {
 }
 
 fun main(args: Array<String>) {
-    println("Hello World.")
+  println("Hello World.")
 }
 

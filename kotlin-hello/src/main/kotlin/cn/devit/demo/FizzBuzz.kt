@@ -1,5 +1,5 @@
 /*
- * Copyright 2017-2019 lxb.
+ * Copyright 2017-2023 lxb.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,17 +19,17 @@
  * @author lxb
  */
 fun main(args: Array<String>) {
-    var n = args[0].toInt();
-    for (i in 1..n) {
-        if (i % 3 == 0 && i % 5 == 0) {
-            println("FizzBuzz")
-        } else if (i % 3 == 0) {
-            println("Fizz")
-        } else if (i % 5 == 0) {
-            println("Buzz")
-        } else {
-            println(i)
-        }
-
+  var n = args[0].toInt();
+  for (i in 1..n) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      println("FizzBuzz")
+    } else if (i % 3 == 0) {
+      println("Fizz")
+    } else if (i % 5 == 0) {
+      println("Buzz")
+    } else {
+      println(i)
     }
+
+  }
 }
