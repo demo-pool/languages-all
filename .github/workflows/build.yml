@@ -1,4 +1,19 @@
-# 
+# Copyright 2023 lxb
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Gtihub Actions 使用说明：
+# [文档1] 语法格式文档 https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 name: Build all languages
 
 on:
@@ -8,13 +23,12 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
+  jvm-stack-build:
+    runs-on: ubuntu-22.04 #文档1中有可用基本环境代号的枚举清单，
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
+    - name: Use Open JDK 8
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
@@ -48,40 +62,11 @@ jobs:
         mvn -B compile
         mvn exec:java  -Dexec.mainClass=Hello 
         mvn exec:java  -Dexec.mainClass="FizzBuzz" -Dexec.args="100"
-        
-        
-        
-    - name: c-hello
-      run: |
-        cd c-hello
-        make
-        ./target/hello
-        ./target/fizz-buzz 100
-        
-    - name: shell-hello
-      run: |
-        cd shell-hello
-        bash src/main/shell/hello.sh
-        bash src/main/shell/fizz-buzz.sh 100
-
-        
-    - name: Set up Go 1.x
-      uses: actions/setup-go@v2
-      with:
-        go-version: ^1.13
-      id: go
-
-    - name: go-hello
-      run: |
-        cd go-hello
-        go run hello.go
-        go run FizzBuzz.go 100  
-        
-        
-        
-        
-        
-        
+  
+  dot-stack-build:
+    runs-on: ubuntu-22.04 
+    steps:
+    - uses: actions/checkout@v2  
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2.1.0
       with:
@@ -109,14 +94,40 @@ jobs:
         dotnet run 
         cd ..
         cd fizzbuzz
-        dotnet run 100  
+        dotnet run 100    
+          
+  other-stack-build:
+    runs-on: ubuntu-22.04 
+
+    steps:
+    - uses: actions/checkout@v2  
+    - name: c-hello
+      run: |
+        cd c-hello
+        make
+        ./target/hello
+        ./target/fizz-buzz 100
         
+    - name: shell-hello
+      run: |
+        cd shell-hello
+        bash src/main/shell/hello.sh
+        bash src/main/shell/fizz-buzz.sh 100
+
         
+    - name: Use Go 1.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: ^1.13
+      id: go
+
+    - name: go-hello
+      run: |
+        cd go-hello
+        go run hello.go
+        go run FizzBuzz.go 100  
         
-        
-        
-        
-    - name: Set up Python
+    - name: Use Python 3.x
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
@@ -128,7 +139,7 @@ jobs:
         python3 src/main/python/FizzBuzz.py 100
     
 
-    - name: node12
+    - name: Use Node12
       uses: actions/setup-node@v1
       with: 
         node-version: 12
