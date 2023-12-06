@@ -103,7 +103,12 @@ jobs:
     runs-on: ubuntu-22.04 
 
     steps:
-    - uses: actions/checkout@v4  
+    - uses: actions/checkout@v4
+
+    - name: apt update
+      run: |
+        sudo apt-get update
+
     - name: c-hello
       run: |
         cd c-hello
@@ -171,3 +176,11 @@ jobs:
         cd rust-hello
         cargo run --bin hello
         cargo run --bin fizz-buzz 100
+
+    - name: elixir-hello
+      run: |
+        sudo apt-get install -y elixir
+        cd elixir-hello
+        elixir -v
+        elixir src/main/elixir/hello.ex 
+        elixir src/main/elixir/fizz-buzz.ex 100
