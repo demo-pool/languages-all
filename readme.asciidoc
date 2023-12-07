@@ -4,9 +4,12 @@ image::https://github.com/demo-pool/languages-all/workflows/Build%20all%20langua
 
 采用比较学习法（comparative study method），对比同一组案例在不同编程语言的实现，能够更客观的学习并理解编程语言的应用场景，也为编程语言的选择提供一点指导。
 
+项目中所纳入的编程语言，请看单独的 link:doc/languamges-table.asciidoc[编程语言表格] 
+ 
 [WARNING]
 
 仅供教学或学习编程语言用。不能用于生产。
+
 
 == 必须的基础知识
 

@@ -1,0 +1,76 @@
+
+= 编程语言清单
+
+列表是本工程所能演示的编程语言清单，按照ASCII字母表顺序排列。
+
+|===
+| Name | Slogon | Website | Environment
+
+| elixir
+| A dynamic, functional language for building scalable and maintainable applications. footnote:n1[取自2023年12月07日，访问各自网站首页面，字体最大的那句话或第一段文字的第一句话]
+| https://elixir-lang.org/
+| runs on the Erlang VM
+
+| fsharp(F#)
+| F# empowers everyone to write succinct, robust and performant code. footnote:n1[]
+| https://fsharp.org/
+| .NET
+
+| go
+| Build simple, secure, scalable systems with Go footnote:n1[]
+| https://go.dev/
+| native
+
+| groovy
+| A multi-faceted language for the Java platform footnote:n1[]
+| https://groovy-lang.org/
+| JVM
+
+| java
+| #1 programming language and development platform. footnote:n2[https://www.oracle.com/java/，2023-12-07]
+| https://dev.java/
+| JVM
+
+| javascript
+| A lightweight interpreted (or just-in-time compiled) programming language with first-class functions. footnote:n1[]
+| https://developer.mozilla.org/en-US/docs/Web/JavaScript
+| Browser or many non-browser environments
+
+| kotlin
+| Concise. Cross‑platform. Fun. footnote:n1[]
+| https://kotlinlang.org/
+| JVM
+
+| visual basic
+| An object-oriented programming language developed by Microsoft. footnote:n1[]
+| https://docs.microsoft.com/en-us/dotnet/visual-basic/
+| .NET
+
+| perl
+| A highly capable, feature-rich programming language with over 36 years of development. footnote:n1[]
+| https://www.perl.org/
+| script
+
+| python
+| A programming language that lets you work quickly and integrate systems more effectively. footnote:n1[]
+| https://www.python.org/
+| script
+
+| rust
+| A language empowering everyone to build reliable and efficient software. footnote:n1[]
+| https://www.rust-lang.org/
+| native
+
+| scala
+| A programming language that scales with you: from small scripts to large multiplatform applications. footnote:n1[]
+| https://www.scala-lang.org/
+| JVM
+
+| bash
+| Bash is the GNU Project's shell—the Bourne Again SHell. footnote:n1[]
+| https://www.gnu.org/software/bash/
+| script
+
+
+|===
+
