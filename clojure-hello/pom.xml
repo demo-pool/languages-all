@@ -32,7 +32,7 @@ limitations under the License.
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-      <version>1.10.0</version>
+      <version>1.11.2</version>
     </dependency>
   </dependencies>
   <profiles>
